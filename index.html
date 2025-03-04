@@ -10,18 +10,22 @@
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-color: #33414f; /* Den innan: #33414f,   */
         }
         #map {
-            height: 100vh;
+            height: 85vh; /* Justera höjden på kartan */
+            width: 90%; /* Gör kartan bred så att den fyller hela bredden */
+            border: 5px solid #7f8d95; /* Sätter en blå ram kring kartan */ /* Den innan: #7f8d95 */
+            border-radius: 10px; /* Rundade hörn */
+            margin: 45px auto; /* Centrerar kartan och ger lite avstånd från toppen */
         }
         .controls {
             position: absolute;
             top: 20px;
             left: 20px;
             z-index: 999;
-            background: rgba(255, 255, 255, 0.8);
-            padding: 15px;
+            background: rgba(230, 230, 230, 0.871);
+            padding: 10px;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
@@ -29,14 +33,14 @@
             background-color: #3498db;
             color: white;
             border: none;
-            padding: 10px;
+            padding: 6px;
             margin: 5px;
             cursor: pointer;
             border-radius: 5px;
-            width: 160px;
+            width: 150px;
         }
         .controls select {
-            width: 180px;
+            width: 170px;
         }
         .controls select:hover, .controls button:hover {
             background-color: #2980b9;
@@ -44,8 +48,8 @@
         .weather-info {
             margin-top: 10px;
             font-size: 14px;
-            color: #333;
-            padding: 10px;
+            color: #333333;
+            padding: 5px;
             border-radius: 5px;
             background-color: rgba(255, 255, 255, 0.9);
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -67,8 +71,8 @@
             <option value="pressure">Pressure</option> <!-- Added pressure -->
             <option value="description">Weather Description</option> <!-- Added description -->
     </select>
-    <button id="updateBtn">Update Weather Data</button>
-    <div class="weather-info" id="infoBox">Click a button to display weather data.</div>
+    <button id="updateBtn">Update Data</button>
+    <div class="weather-info" id="infoBox">Click a button to display weather data</div>
 </div>
 
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
